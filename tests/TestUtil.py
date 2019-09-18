@@ -7,6 +7,6 @@ def setupData():
         os.makedirs("./dat")
 
 def tearDown():
-    if (os.path.exists("./dat_backup")):
-        shutil.rmtree("./dat", ignore_errors=False, onerror=None)
+    shutil.rmtree("./dat", ignore_errors=False, onerror=None)
+    if (os.path.exists("./dat_backup")):        
         os.rename("./dat_backup", "./dat")

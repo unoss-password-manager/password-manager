@@ -9,6 +9,7 @@ class Test_User(unittest.TestCase):
     @classmethod
     def setUpClass(self):        
         #setup test user data
+        testUtil.setupData()
         self.user = User("test_user")
         self.user.changePassword("test_password")
         

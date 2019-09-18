@@ -21,6 +21,10 @@ class Test_Account(unittest.TestCase):
         account2.setAccountUsername("user_instagram")
         self.user.addAccount(account2, "pass_instagram")
 
+    @classmethod
+    def tearDownClass(self):
+        testUtil.tearDown()
+
     def test_add_remove_account(self):
         accountName = "Google"
         accountUsername = "userGoogle"
